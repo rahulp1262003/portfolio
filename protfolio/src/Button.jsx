@@ -2,9 +2,9 @@ import React from 'react'
 
 import { motion } from 'framer-motion';
 
-export function Ancors({itemStart}) {
+export function Ancors({show}) {
   return (
-    <div className={`flex max-md:flex-col max-md:text-3xl max-md:font-semibold font-poppins ${itemStart} justify-center items-center text-white transition-all duration-100 delay-200 gap-[1rem] max-md:gap-0 `}>
+    <div className={`flex max-md:flex-col max-md:text-3xl max-md:font-semibold font-poppins ${show} justify-center items-center text-white transition-all duration-100 delay-200 gap-[1rem] max-md:gap-0 `}>
 
       <motion.a whileHover={{scale:1.3}} whileTap={{ scale: 0.8 }}
         className='p-2 ' href="#">Home</motion.a>

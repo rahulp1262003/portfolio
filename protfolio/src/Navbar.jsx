@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
 import { FaCode } from "react-icons/fa6";
 import { Ancors, Button } from './Button';
-import { motion } from 'framer-motion';
 
-const variants = {
-    open: { opacity: 1, y: "0%" },
-    closed: { opacity: 0, y: "-400%" },
-}
+
 
 function Navbar() {
 
@@ -15,15 +11,15 @@ function Navbar() {
 
     return (
         <header>
-            <nav className='w-full h-[4rem] bg-b p-4 flex justify-around items-center max-md:justify-between max-md:px-8 fixed z-20 '>
+            <nav className={`w-full ${isClick ? 'max-md:h-[20rem] max-md:item-end max-md:rounded-b-[40px] max-md:p-8 max-md:transition-all  ' : 'max-md:h-4rem max-md:transition-all '} h-[4rem] bg-b p-4 flex justify-around items-center max-md:justify-between max-md:px-8 fixed z-50 bg-black max-md:items-end `}>
 
                 {/* icon */}
                 <FaCode className='size-[1.6rem] z-40 text-white text-[1.5rem] font-semibold' />
 
                 {/* buttons */}
-                <div className="ancers flex justify-center items-center max-md:hidden">
+                <div className={`ancers flex justify-center items-center  ${isClick ? 'max-md:block' : 'max-md:hidden'}`}>
                     {/* Ancors */}
-                    <Ancors />
+                    <Ancors show={''} />
                 </div>
 
                 {/* special button */}
@@ -39,31 +35,6 @@ function Navbar() {
             </nav>
 
             {/* menu */}
-            <motion.div
-
-                className={`menu md:hidden absolute top-0 pl-[5rem] flex justify-start items-center w-full ${isClick ? 'h-screen ' : 'h-0 transition-all'} bg-black overflow-hidden `}>
-
-                <motion.div
-
-                    animate={isClick ? "open" : "closed"}
-                    variants={variants}
-                    transition={{ type: "spring" }}
-
-                    className={` absolute flex flex-col justify-center 
-                    items-start  ${isClick ? 'relative top-0 ' : 'relative -top-[15rem] transition-all duration-700 z-40'}`}>
-
-                    {/* Ancors */}
-                    <Ancors itemStart={'max-md:items-start'} />
-
-                    {/* buttons */}
-                    {isClick && <Button itemStart={'max-md:items-start'} block={isClick ? 'max-md:block' : 'max-md:hidden'} />}
-
-                    <div className=" absolute left-[-15rem] -top-[10rem] size-[18rem] rounded-[50%] bg-purple-600 blur-3xl -z-40"></div>
-
-                    <div className=" absolute right-[-30rem] top-[11rem] size-[18rem] rounded-[50%] bg-pink-700 blur-3xl -z-40"></div>
-                </motion.div>
-
-            </motion.div>
         </header>
 
     )
