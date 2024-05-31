@@ -7,3 +7,19 @@
         font-family: "Poppins", sans-serif;
     }
   }
+
+.main-bg{
+        background-image:
+            linear-gradient(to right, rgb(69, 69, 69) -1px, transparent 1px),
+            linear-gradient(to bottom, rgb(69, 69, 69) -1px, transparent 1px);
+        background-size: 2rem 2rem;
+        background-position: center center;
+}
+
+.sub-main{
+    background-image:radial-gradient(circle, rgba(255, 255, 255, 0), rgba(218, 218, 218, 0), rgba(0, 0, 0, 0.877));
+}
+
+.menu{
+    z-index: 10;
+}

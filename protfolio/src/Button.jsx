@@ -11,6 +11,8 @@ export function Ancors({itemStart}) {
       <motion.a whileHover={{scale:1.3}} whileTap={{ scale: 0.8 }}
         className='p-2' href="#">About</motion.a>
       <motion.a whileHover={{scale:1.3}} whileTap={{ scale: 0.8 }}
+        className='p-2' href="#">Projects</motion.a>
+      <motion.a whileHover={{scale:1.3}} whileTap={{ scale: 0.8 }}
         className='p-2' href="#">Skills</motion.a>
       <motion.a whileHover={{scale:1.3}} whileTap={{ scale: 0.8 }}
         className='p-2' href="#">Contact</motion.a>
