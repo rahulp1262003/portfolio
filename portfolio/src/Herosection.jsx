@@ -5,7 +5,7 @@ function Herosection() {
   return (
     <section className='w-full h-screen bg-black '>
       {/* main div with grid lines */}
-      <div className="main-bg w-full h-screen flex justify-center items-center flex-row ">
+      <div className="main-bg w-full h-screen flex justify-center items-center flex-row overflow-hidden">
 
         {/* for radial-gradient */}
         <div className={`sub-main w-full h-screen flex justify-center items-center p-4 `} >
